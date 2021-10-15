@@ -13,6 +13,8 @@
 
     --primary-font: 'Open Sans', sans-serif;
     --header-font: 'Raleway', sans-serif;
+
+    --primary-font-size: 16px;
 }
 
 * {
@@ -22,10 +24,62 @@
 }
 
 body {
-
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
 }
 
 .container {
     width: 1352px;
     margin: 0 auto;
+
 }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-grey);
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 22px;
+}
+
+a:hover {
+    color: var(--color-black);
+    border-bottom: 4px solid var(--color-primary);
+}
+
+header {
+    width: 100vw;
+    height: 70px;
+    box-shadow: 0px 3px 6px #00000029;
+
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    padding: 0 22px;
+}
+
+.logo {
+    font-family: var(--header-font);
+    font-weight: 300;
+    font-size: 2em;
+    color: var(--color-primary)
+}
+
