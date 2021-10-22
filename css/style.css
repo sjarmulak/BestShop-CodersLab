@@ -105,26 +105,35 @@ main {
     margin: 20px 0;
 }
 
-a.btn {
+.btn {
     color: var(--color-white);
     font-weight: bold;
     background: var(--color-primary);
     border-radius: 50px;
     padding: 20px 150px;
     box-shadow: 5px 10px 14px var(--color-primary-shadow);
+
+}
+
+.btn.red, .btn.green {
+    box-shadow: none;
 }
 
 .statistics {
-    height: 531px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.statistics h2 {
+    margin: 100px 0;
 }
 
 .stat-numbers {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -142,6 +151,86 @@ a.btn {
     border: 1px solid #E8E9ED;
     border-radius: 5px;
     margin-bottom: 37px;
+    display: flex;
+
+}
+
+.benefit.green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    padding: 80px 150px 80px 50px;
+    position: relative;
+
+}
+
+.one-side {
+    width: 100%;
+    height: 100%;
+    padding: 80px 150px 80px 50px;
+}
+
+.one-sided {
+    margin-right: 37px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 330px;
+    height: 4px;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    background: var(--color-redish);
+    position: absolute;
+    z-index: 0;
+    margin-top: -50px;
+    transform: rotate(45deg);
+    right: 15%;
+}
+
+.big-circle {
+    width: 320px;
+    height: 320px;
+  border-radius: 50%;
+    background: var(--color-primary);
+    position: absolute;
+    z-index: 0;
+
+
+
+}
+
+.front-img {
+    z-index: 5;
+    margin-right: -100px;
+    margin-top: 50px;
+    transform: scale(80%);
+}
+
+.phone-img {
+    transform: scale(90%);
+    z-index: 5;
+margin-top: 40px    ;
+
+}
+
+.benefit-container {
+    display: flex;
+    width: 100%;
 }
 
 h1 {
@@ -155,8 +244,72 @@ h1 {
 
 h2 {
     display: block;
+    font-family: var(--header-font);
+    font-size: 36px;
+}
+
+h4 {
+    font-family: var(--header-font);
+    font-weight: 800;
+    letter-spacing: 6px;
+}
+
+h5 {
+    font-size: 12px;
+    font-family: var(--header-font);
+    font-weight: bold;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.single-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
 }
+
+.single-stat * {
+    margin: 10px 0;
+}
+
+.single-stat p {
+    font-family: var(--header-font);
+    color: var(--color-grey);
+}
+
+.circle {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+transform: translate(50%);
+    
+}
+
+.trumpet {
+    transform: scale(60%);
+    margin-top: 80px;
+}
+
+.red {
+    background: var(--color-redish);
+}
+
+.blue {
+    background: var(--color-primary);
+}
+
+.green {
+    background: var(--color-green);
+}
+
 .pricing {
     display: flex;
     justify-content: center;
@@ -167,12 +320,95 @@ h2 {
 .pricing-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .pricing-option {
     width: 372px;
     height: 461px;
 
+    border-radius: 18px;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+}
+
+
+.pricing-option a {
+    font-size: 13px;
+    padding: 16px 57px;
+    position: absolute;
+    bottom: -23px;
+}
+
+
+.pricing h2 {
+    padding: 100px 0 50px 0;
+}
+
+.pricing-name {
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.price {
+    font-family: var(--primary-font);
+    font-weight: 300;
+    font-size: 46px;
+    margin-bottom: 70px;
+}
+
+
+.red-price {
+    border: 1px solid var(--color-redish);
+}
+
+.red-price .price {
+    color: var(--color-redish);
+}
+
+.blue-price {
+    border: 1px solid var(--color-primary);
+    box-shadow: 5px 10px 27px var(--color-primary-shadow);
+    width: 405px;
+    height: 500px;
+}
+
+.blue-price .price {
+    color: var(--color-primary);
+}
+
+.green-price {
+    border: 1px solid var(--color-green);
+}
+
+.green-price .price {
+    color: var(--color-green);
+}
+
+.pricing-element {
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.option-check::before {
+    content: url("../assets/Ckechmark-1.svg");
+    margin-right: 10px;
+
+}
+
+.option-uncheck::before {
+    content: url("../assets/Close.svg");
+    margin-right: 10px;
 }
 
 .contact {
@@ -180,7 +416,12 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
+    margin-top: 200px;
 
+}
+
+.contact h2 {
+    font-size: 49px;
 }
 
 .contact-info, .contact-form {
@@ -188,19 +429,100 @@ h2 {
     width: 100%;
 }
 
+.contact-info p {
+    line-height: 80px;
+}
+
+.contact-info a {
+    color: var(--color-grey);
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.contact-info span {
+    margin-right: 20px;
+}
+
 .contact-form, label {
     display: flex;
     flex-direction: column;
+}
+
+.contact-form span {
+    letter-spacing: 3px;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 60px;
+}
+
+
+
+input[type=text], input[type="email"] {
+    border: none;
+    border-bottom: solid 1px var(--color-grey);
+    margin-bottom: 40px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.checkbox-label {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+}
+
+.check-box {
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+
+
+.checkbox-label input:checked + div {
+background-image: url("../assets/Checkmark.svg");
+background-position: center;
+background-repeat: no-repeat;
+}
+
+label p {
+    color: var(--color-grey);
+    font-size: 12px;
+}
+
+form .btn {
+    align-self: flex-end;
+    font-size: 13px;
+    padding: 20px 95px;
+    margin-top: 50px;
 }
 
 footer {
     height: 89px;
     background: var(--color-light-grey);
     box-shadow: 0px -5px 40px #00000029;
+
+
 }
 
 footer .logo {
     font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 11px;
+    color: var(--color-grey);
 }
 
 footer .container {
